@@ -16,7 +16,7 @@ export const fetchFinancialData = createAsyncThunk(
       ...(sortOrder && { sort_order: sortOrder })
     })
 
-    const response = await axios.get(`http://localhost:5000/api/income-statements?${params}`)
+    const response = await axios.get(`https://valueglance.onrender.com/api/income-statements?${params}`)
     return response.data
   }
 )
